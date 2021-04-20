@@ -26,8 +26,8 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     );
     controller.forward();
 
-    animation =
-        ColorTween(begin: Colors.yellow, end: Colors.white).animate(controller);
+    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white)
+        .animate(controller);
 
     controller.addListener(() {
       setState(() {});
@@ -52,22 +52,30 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           children: <Widget>[
             Row(
               children: <Widget>[
-                Hero(
-                  tag: 'logo',
-                  child: Container(
-                    child: Image.asset('images/logo.png'),
-                    height: 60,
+                Flexible(
+                  child: Hero(
+                    tag: 'logo',
+                    child: Container(
+                      child: Image.asset('images/logo.png'),
+                      height: 60,
+                    ),
                   ),
                 ),
-                TypewriterAnimatedTextKit(
-                  text: ['Flash Chat'],
+                AnimatedTextKit(
+                  animatedTexts: [
+                    TypewriterAnimatedText(
+                      'Flash Chat',
+                      textStyle: TextStyle(
+                        fontSize: 45.0,
+                        color: Colors.black38,
+                        fontWeight: FontWeight.w700,
+                      ),
+                      speed: Duration(
+                        milliseconds: 100,
+                      ),
+                    )
+                  ],
                   isRepeatingAnimation: false,
-                  speed: Duration(milliseconds: 90),
-                  textStyle: TextStyle(
-                    fontSize: 45.0,
-                    color: Colors.black38,
-                    fontWeight: FontWeight.w700,
-                  ),
                 ),
               ],
             ),

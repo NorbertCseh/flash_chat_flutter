@@ -41,5 +41,28 @@
     }
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyD7ZWRavN_tAI9i-gluc3U9pmyPOjs2A7A",
+    authDomain: "flash-chat-8bf5d.firebaseapp.com",
+    projectId: "flash-chat-8bf5d",
+    storageBucket: "flash-chat-8bf5d.appspot.com",
+    messagingSenderId: "137429039489",
+    appId: "1:137429039489:web:6a248e4b188d14fa0e1080",
+    measurementId: "G-9F53HZL1E4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </body>
 </html>
